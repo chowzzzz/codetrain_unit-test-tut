@@ -1,0 +1,18 @@
+{
+  "name": "codetrain_unit-test-tut",
+  "version": "1.0.0",
+  "description": "The Coding Train yt tutorial on Unit Testing with Jest",
+  "main": "sketch.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "testing",
+    "test"
+  ],
+  "author": "Mok",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^23.2.0"
+  }
+}
