@@ -4,9 +4,9 @@
 #
 # CONFIGURATION FORMAT FOR CIRCLECI
 version: 2
-jobs:         # JOB THAT I WANT TO DO IS TO
-  build:      # BUILD THE PROJECT
-    docker:   # IN A DOCKER (DOCKER PROVIDES A SELF-CONTAINED ENV THAT HAS NO EXTERNAL SETUP YET - so it will create a clean new env that will run the steps below from scratch)
+jobs:                       # JOB THAT I WANT TO DO IS TO
+  build:                    # BUILD THE PROJECT
+    docker:                 # IN A DOCKER (DOCKER PROVIDES A SELF-CONTAINED ENV THAT HAS NO EXTERNAL SETUP YET - so it will create a clean new env that will run the steps below from scratch)
       # specify the version you desire here
       - image: circleci/node:8.11.1
       
@@ -17,9 +17,10 @@ jobs:         # JOB THAT I WANT TO DO IS TO
 
     #working_directory: ~/repo
 
-    steps:    # STEPS TAKEN TO KNOW THAT THIS IS WORKING
+    steps:                  # STEPS TAKEN TO KNOW THAT THIS IS WORKING
+      - checkout            # CHECKOUT CURRERNT CODE FROM REPO BEFORE RUNNING:
       - run: npm install    # GET THE PACKAGES AGAIN
-      - run: npm test       # run tests!
+      - run: npm test       # RUN TESTS
 
       #- checkout
 
